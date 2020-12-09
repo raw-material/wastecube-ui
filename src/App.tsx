@@ -13,23 +13,13 @@ const App = () => {
 
   const data = {
     ads: [
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/id/1/300/200', title: 'Promo 1' },
+      { url: 'https://picsum.photos/id/2/300/200', title: 'Promo 2' },
+      { url: 'https://picsum.photos/id/3/300/200', title: 'Promo 3' },
+      { url: 'https://picsum.photos/id/4/300/200', title: 'Promo 4' },
+      { url: 'https://picsum.photos/id/5/300/200', title: 'Promo 5' }
     ]
   };
-
-
-  var settings = {  
-          dots: true,  
-          infinite: true,  
-          speed: 500,  
-          centerMode: true,  
-          slidesToShow: 1,  
-          slidesToScroll: 1  
-   };
 
   return (
     <GeistProvider>
@@ -37,31 +27,10 @@ const App = () => {
 
       {appState === 'DEFAULT' && (
         <div>
-          <a
-            href="https://caferati.me/demo/react-awesome-slider/autoplay"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            slider docs
-          </a>
-          { /* data.ads */
-        	  
-          	   data.ads.map(data => {
-          	   	return(
-          	   		<div key={data}>
-          	   			<img alt="image" src={data} />
-          	   		</div>
-          	   	)
-          	   })
-               
+          <figure>
+            <img alt={data.ads[0].title} src={data.ads[0].url} />
+          </figure>
 
-
-          	
-          }
-
-          
-         	
-          
           <button onClick={() => setAppState('LOADING')}>
             Tocca per iniziare
           </button>
