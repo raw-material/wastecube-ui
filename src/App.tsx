@@ -13,11 +13,11 @@ const App = () => {
 
   const data = {
     ads: [
-      'https://picsum.photos/200/300',
-      'https://picsum.photos/200/300',
-      'https://picsum.photos/200/300',
-      'https://picsum.photos/200/300',
-      'https://picsum.photos/200/300'
+      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/200/300', title: '' },
     ]
   };
 
