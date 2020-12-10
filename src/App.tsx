@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GeistProvider, CssBaseline } from '@geist-ui/react';
+import DefaultView from './components/DefaultView';
 
 type AppState = 'DEFAULT' | 'LOADING' | 'FINAL';
 
@@ -8,38 +8,24 @@ const App = () => {
 
   const data = {
     ads: [
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
-      { url: 'https://picsum.photos/200/300', title: '' },
+      { url: 'https://picsum.photos/id/1/300/200', title: 'Promo 1' },
+      { url: 'https://picsum.photos/id/2/300/200', title: 'Promo 2' },
+      { url: 'https://picsum.photos/id/3/300/200', title: 'Promo 3' },
+      { url: 'https://picsum.photos/id/4/300/200', title: 'Promo 4' },
+      { url: 'https://picsum.photos/id/5/300/200', title: 'Promo 5' }
     ]
   };
 
   return (
-    <GeistProvider>
-      <CssBaseline />
-
+    <div className="wastecube-ui-wrapper">
       {appState === 'DEFAULT' && (
-        <div>
-          <a
-            href="https://caferati.me/demo/react-awesome-slider/autoplay"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            slider docs
-          </a>
-          {/* data.ads */}
-          <button onClick={() => setAppState('LOADING')}>
-            Tocca per iniziare
-          </button>
-        </div>
+        <DefaultView changeState={() => setAppState('LOADING')} />
       )}
       {appState === 'LOADING' && (
         <button onClick={() => setAppState('FINAL')}>Finito</button>
       )}
       {appState === 'FINAL' && <p>Yey</p>}
-    </GeistProvider>
+    </div>
   );
 };
 
