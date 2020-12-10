@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default view 1`] = `
+<div
+  className="default-view"
+>
+  <figure>
+    <img
+      alt="bottles and cans"
+      src="bottles-and-cans.jpg"
+    />
+  </figure>
+  <div
+    className="button-wrapper"
+  >
+    <button
+      className="start-button"
+      onClick={[Function]}
+    >
+      Tocca per iniziare
+    </button>
+  </div>
+</div>
+`;

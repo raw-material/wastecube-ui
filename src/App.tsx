@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { GeistProvider, CssBaseline } from '@geist-ui/react';
-import './App.css';
+import DefaultView from './components/DefaultView';
 
 type AppState = 'DEFAULT' | 'LOADING' | 'FINAL';
 
@@ -18,26 +17,15 @@ const App = () => {
   };
 
   return (
-    <GeistProvider>
-      <CssBaseline />
-
+    <div className="wastecube-ui-wrapper">
       {appState === 'DEFAULT' && (
-        <div>
-          <figure>
-            <img className="image" alt={data.ads[0].title} src={data.ads[0].url} />
-          </figure>
-          <div className="wrapper">
-            <button className="start" onClick={() => setAppState('LOADING')}>
-              Tocca per iniziare
-            </button>
-          </div>
-        </div>
+        <DefaultView changeState={() => setAppState('LOADING')} />
       )}
       {appState === 'LOADING' && (
         <button onClick={() => setAppState('FINAL')}>Finito</button>
       )}
       {appState === 'FINAL' && <p>Yey</p>}
-    </GeistProvider>
+    </div>
   );
 };
 
