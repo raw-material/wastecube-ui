@@ -28,12 +28,13 @@ const App = () => {
       {appState === 'DEFAULT' && (
         <div>
           <figure>
-            <img alt={data.ads[0].title} src={data.ads[0].url} />
+            <img className="image" alt={data.ads[0].title} src={data.ads[0].url} />
           </figure>
-
-          <button onClick={() => setAppState('LOADING')}>
-            Tocca per iniziare
-          </button>
+          <div className="wrapper">
+            <button className="start" onClick={() => setAppState('LOADING')}>
+              Tocca per iniziare
+            </button>
+          </div>
         </div>
       )}
       {appState === 'LOADING' && (

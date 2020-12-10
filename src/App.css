@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-body{
-  width: calc(100vh-120px);
-}
 
 .App-logo {
   height: 40vmin;
@@ -26,6 +23,27 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.wrapper{
+  display: flex;
+  
+
+}
+.start{
+  
+  object-position: center;
+  font-size: 2rem;
+  border:0;
+  margin:auto;
+  display:block;
+
+  
+}
+
+.image{
+  height: 85vh;
+  width: 250vh;
 }
 
 .App-link {
