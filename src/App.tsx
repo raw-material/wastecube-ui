@@ -1,9 +1,5 @@
 import * as React from 'react';
 import { GeistProvider, CssBaseline } from '@geist-ui/react';
-//import AwesomeSlider from 'react-awesome-slider';
-//import 'react-awesome-slider/dist/styles.css';
-//import AutoplaySlider from 'react-awesome-slider/hoc/autoplay';
-//import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fold-out-animation.css';
 import './App.css';
 
 type AppState = 'DEFAULT' | 'LOADING' | 'FINAL';
