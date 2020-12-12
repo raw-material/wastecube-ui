@@ -24,9 +24,6 @@ const App = () => {
       )}
       {appState === 'LOADING' && (
         <LoadingView changeState={() => setAppState('FINAL')} />
-        //<button onClick={() => setAppState('FINAL')}>Finito</button>
-        
-        
       )}
       {appState === 'FINAL' && <p>Yey</p>}
     </div>
