@@ -7,17 +7,6 @@ interface LoadingStateProps {
   changeState: () => any;
 }
 
-const defaultAds: Array<Ad> = [
-  {
-    title: 'bottles and cans',
-    url: bottlesAndCans
-  },
-  {
-    title: 'bottles and trees',
-    url: bottleTrees
-  }
-];
-
 const LoadingView: React.FC<LoadingStateProps> = ({
   changeState
 }) => (
