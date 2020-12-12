@@ -3,11 +3,6 @@ import bottlesAndCans from './pictures/bottles-and-cans.jpg';
 import bottleTrees from './pictures/bottles-trees.jpg';
 import './index.scss';
 
-interface Ad {
-  url: string;
-  title: string;
-}
-
 interface LoadingStateProps {
   changeState: () => any;
 }
