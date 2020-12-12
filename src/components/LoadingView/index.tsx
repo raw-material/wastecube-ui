@@ -9,7 +9,6 @@ interface Ad {
 }
 
 interface LoadingStateProps {
-  ads?: Array<Ad>;
   changeState: () => any;
 }
 
