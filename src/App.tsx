@@ -1,5 +1,6 @@
 import * as React from 'react';
 import DefaultView from './components/DefaultView';
+import LoadingView from './components/LoadingView';
 
 type AppState = 'DEFAULT' | 'LOADING' | 'FINAL';
 
@@ -22,7 +23,10 @@ const App = () => {
         <DefaultView changeState={() => setAppState('LOADING')} />
       )}
       {appState === 'LOADING' && (
-        <button onClick={() => setAppState('FINAL')}>Finito</button>
+        <LoadingView changeState={() => setAppState('FINAL')} />
+        //<button onClick={() => setAppState('FINAL')}>Finito</button>
+        
+        
       )}
       {appState === 'FINAL' && <p>Yey</p>}
     </div>

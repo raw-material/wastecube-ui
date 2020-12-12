@@ -1,0 +1,61 @@
+.loading-view {
+    padding: 0 20px;
+
+    figure {
+        height: 85vh;
+        width: 100%;
+        margin: 0;
+        display: flex;
+
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+
+        button.finish-button {
+            font-size: 2rem;
+            position: relative;
+            top: 85vh;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .pet-wrapper {
+        button.pet-button {
+            font-size: 3rem;
+            text-align: right;
+            border: 0;
+            float: left;
+            padding: 50px 50px;
+            margin: auto;
+            display: block;
+        }
+    }
+
+    .hdpe-wrapper {
+        button.hdpe-button {
+            font-size: 3rem;
+            border: 0;
+            float: right;
+            padding: 50px 50px;
+            margin: auto;
+            display: block;
+        }
+    }
+
+    .vertical {
+        border-left: 6px solid black;
+        height: 70%;
+        position: absolute;
+        left: 50%;
+        margin-top: 20px;
+        padding-top: 20px;
+
+    }
+}
