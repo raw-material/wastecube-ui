@@ -10,7 +10,7 @@ interface Ad {
 
 interface DefaultStateProps {
   ads?: Array<Ad>;
-  changeState: () => any;
+  changeState: (action: number) => void;
 }
 
 const defaultAds: Array<Ad> = [
@@ -33,7 +33,7 @@ const DefaultView: React.FC<DefaultStateProps> = ({
       <img alt={ads[0].title} src={ads[0].url} />
     </figure>
     <div className="button-wrapper">
-      <button className="start-button" onClick={changeState}>
+      <button className="start-button" onClick={() => changeState(1)}>
         Tocca per iniziare
       </button>
     </div>
