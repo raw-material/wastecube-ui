@@ -4,6 +4,8 @@ import LoadingView from './components/LoadingView';
 
 type AppState = 'DEFAULT' | 'LOADING' | 'FINAL';
 
+const states: Array<AppState> = ['DEFAULT', 'LOADING', 'FINAL'];
+
 const App = () => {
   const [appState, setAppState] = React.useState<AppState>('DEFAULT');
 
@@ -17,13 +19,16 @@ const App = () => {
     ]
   };
 
+  const changeState = (state: AppState) => (action: number) =>
+    setAppState(states[states.indexOf(state) + action]);
+
   return (
     <div className="wastecube-ui-wrapper">
       {appState === 'DEFAULT' && (
-        <DefaultView changeState={() => setAppState('LOADING')} />
+        <DefaultView ads={data?.ads} changeState={changeState('DEFAULT')} />
       )}
       {appState === 'LOADING' && (
-        <LoadingView changeState={() => setAppState('FINAL')} />
+        <LoadingView changeState={changeState('LOADING')} />
       )}
       {appState === 'FINAL' && <p>Yey</p>}
     </div>
