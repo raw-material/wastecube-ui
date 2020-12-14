@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders loading view 1`] = `
+<div
+  className="loading-view"
+>
+  <div
+    className="count-wrapper"
+  >
+    <p>
+      Hai conferito 
+      0
+       bottiglie
+    </p>
+  </div>
+  <div
+    className="button-wrapper"
+  >
+    <button
+      className="finish-button"
+      onClick={[Function]}
+    >
+      finito
+    </button>
+  </div>
+</div>
+`;

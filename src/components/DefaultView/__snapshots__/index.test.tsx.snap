@@ -4,12 +4,6 @@ exports[`renders default view 1`] = `
 <div
   className="default-view"
 >
-  <figure>
-    <img
-      alt="bottles and cans"
-      src="bottles-and-cans.jpg"
-    />
-  </figure>
   <div
     className="button-wrapper"
   >
