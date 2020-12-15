@@ -1,6 +1,7 @@
 import * as React from 'react';
 import DefaultView from '../DefaultView';
 import LoadingView from '../LoadingView';
+import FinalView from '../FinalView';
 
 export interface IAd {
   title: string;
@@ -53,7 +54,9 @@ const App = () => {
       {appState === 'LOADING' && (
         <LoadingView types={data?.types} changeState={changeState('LOADING')} />
       )}
-      {appState === 'FINAL' && <p>Yey</p>}
+      {appState === 'FINAL' && (
+        <FinalView ads={data?.ads} changeState={changeState('FINAL')} />
+      )}
     </div>
   );
 };

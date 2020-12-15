@@ -1,0 +1,69 @@
+.final-view{
+	.good{
+		text-align: center;
+		margin-top: 50px;
+		font-size: 2rem;
+	}
+	.container-wrapper{
+		//display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+		border: 1px solid black;
+		width: auto;
+		height: auto;
+
+	}
+
+	.ellipse{
+    	background-color: black;
+    	height: 90px;
+    	width: 150px;
+    	border-radius: 50%;
+    	display: inline-block;
+    	white-space: nowrap;  
+    	justify-content: space-between;
+    	//float: left;
+    	margin-right: 66px;
+    	
+		
+	}
+
+	div.circle {
+  		height: 90px;
+    	width: 150px;
+    	display: inline-block;
+    	margin-right: 66px;
+  		border-radius: 50%;
+  		border: solid 2px;
+  		
+	}
+
+	.type-description {
+        display: inline-block;
+        margin-right: 66px;
+        border: solid 3px;
+        border-radius: 50%;
+
+        .image-cropper {
+    		width: 100px;
+    		height: 100px;
+    		position: relative;
+    		overflow: hidden;
+    		border-radius: 50%;
+		}
+        
+        .profile-pic {
+  			display: inline;
+  			margin: 0 auto;
+  			margin-left: -25%; //centers the image
+  			height: 100%;
+  			width: auto;
+		}        
+    }
+
+    
+	
+
+
+}
