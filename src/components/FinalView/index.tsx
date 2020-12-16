@@ -15,19 +15,20 @@ const FinalView: React.FC<FinalStateProps> = ({ ads = [], changeState }) => (
 			<p>Hai caricato 2 bottiglie</p>
 		</div>
 		<div className="container-wrapper">
-			{ads?.map((ad, index) => (
-				<figure key={ad.title + index}>
+			<p className="number-of-contributions">Con questo numero di conferimenti puoi ottenere:</p>
+			{ads?.filter(ad => ad.isPromo == true).map(ad =>
+
+				<figure key={ad.title}>
 					<img
-						//src={`http://localhost:5000${ad.url}`}
 						alt={ad.description}
 					/>
 				</figure>
-			))}
-
-			{ads?.map((ad, index) => (
+			)}
+			<p className="prize-description">Scegli il tuo premio: </p>
+			{ads?.filter(ad => ad.isPromo == true).map(ad =>
 				<div className="type-description">
 					<div className="image-cropper">
-						<figure key={ad.title + index}>
+						<figure key={ad.title}>
 							<img
 								className="profile-pic"
 								src={`http://localhost:5000${ad.url}`}
@@ -35,7 +36,7 @@ const FinalView: React.FC<FinalStateProps> = ({ ads = [], changeState }) => (
 						</figure>
 					</div>
 				</div>
-			))}
+			)}
 
 			<br />
 			<br />

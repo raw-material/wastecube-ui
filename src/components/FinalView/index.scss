@@ -13,20 +13,15 @@
 		width: auto;
 		height: auto;
 
-	}
+		.prize-description{
+			margin-top: 5vh;
+			margin-bottom: 5vh;
 
-	.ellipse{
-    	background-color: black;
-    	height: 90px;
-    	width: 150px;
-    	border-radius: 50%;
-    	display: inline-block;
-    	white-space: nowrap;  
-    	justify-content: space-between;
-    	//float: left;
-    	margin-right: 66px;
-    	
-		
+		}
+
+		.number-of-contributions{
+			margin-bottom: 3vh;
+		}
 	}
 
 	div.circle {
